@@ -3,7 +3,7 @@
 <p align="center">
 <img src="assets/EXAONE_Symbol+BI_3d.png", width="400", style="margin: 40 auto;">
 <br>
-<p align="center"> 🤗 <a href="https://huggingface.co/collections/LGAI-EXAONE/exaone-35-674d0e1bb3dcd2ab6f39dbb4">HuggingFace</a> &nbsp | &nbsp 📝 <a href="https://www.lgresearch.ai/blog/view?seq=507"> Blog</a> &nbsp | &nbsp 📑 <a href="https://www.lgresearch.ai/data/upload/tech_report/en/Technical_report_EXAONE_3.5.pdf"> Technical Report </a>
+<p align="center"> 🤗 <a href="https://huggingface.co/collections/LGAI-EXAONE/exaone-35-674d0e1bb3dcd2ab6f39dbb4">HuggingFace</a> &nbsp | &nbsp 📝 <a href="https://www.lgresearch.ai/blog/view?seq=507"> Blog</a> &nbsp | &nbsp 📑 <a href="https://arxiv.org/abs/2412.04862"> Technical Report </a>
 <!-- TODO: Add Demo page? -->
 <br>
 
@@ -25,13 +25,13 @@ Our documentation consists of the following sections:
 
 ## News
 
-- 2024.12.09: We release the EXAONE 3.5 language model series including 2.4B, 7.8B, and 32B instruction-tuned models. Check out the 📑 [Technical Report](https://www.lgresearch.ai/data/upload/tech_report/en/Technical_report_EXAONE_3.5.pdf)!
+- 2024.12.09: We release the EXAONE 3.5 language model series including 2.4B, 7.8B, and 32B instruction-tuned models. Check out the 📑 [Technical Report](https://arxiv.org/abs/2412.04862)!
 
 <br>
 
 ## Performance
 
-Some experimental results are shown below. The full evaluation results can be found in the [Technical Report](https://www.lgresearch.ai/data/upload/tech_report/en/Technical_report_EXAONE_3.5.pdf).
+Some experimental results are shown below. The full evaluation results can be found in the [Technical Report](https://arxiv.org/abs/2412.04862).
 
 <br>
 
@@ -483,7 +483,7 @@ The model is licensed under [EXAONE AI Model License Agreement 1.1 - NC](./LICEN
 @article{exaone-3.5,
   title={EXAONE 3.5: Series of Large Language Models for Real-world Use Cases},
   author={LG AI Research},
-  journal={arXiv preprint arXiv:XXXX.XXXXX},
+  journal={arXiv preprint arXiv:2412.04862},
   year={2024}
 }
 ```
