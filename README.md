@@ -25,13 +25,13 @@ Our documentation consists of the following sections:
 
 ## News
 
-- 2024.12.09: We release the EXAONE 3.5 language model series including 2.4B, 7.8B, and 32B instruction-tuned models. Check out the 📑 [Technical Report](https://arxiv.org/abs/XXXX.XXXXX)!
+- 2024.12.09: We release the EXAONE 3.5 language model series including 2.4B, 7.8B, and 32B instruction-tuned models. Check out the 📑 [Technical Report](https://www.lgresearch.ai/data/upload/tech_report/en/Technical_report_EXAONE_3.5.pdf)!
 
 <br>
 
 ## Performance
 
-Some experimental results are shown below. The full evaluation results can be found in the [Technical Report](https://arxiv.org/abs/XXXX.XXXXX).
+Some experimental results are shown below. The full evaluation results can be found in the [Technical Report](https://www.lgresearch.ai/data/upload/tech_report/en/Technical_report_EXAONE_3.5.pdf).
 
 <br>
 
