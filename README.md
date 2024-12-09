@@ -3,7 +3,7 @@
 <p align="center">
 <img src="assets/EXAONE_Symbol+BI_3d.png", width="400", style="margin: 40 auto;">
 <br>
-<p align="center"> 🤗 <a href="https://huggingface.co/collections/LGAI-EXAONE/exaone-35-674d0e1bb3dcd2ab6f39dbb4">HuggingFace</a> &nbsp | &nbsp 📝 <a href="https://www.lgresearch.ai/blog/view?seq=507"> Blog</a> &nbsp | &nbsp 📑 <a href="https://arxiv.org/abs/XXXX.XXXXX"> Technical Report </a>
+<p align="center"> 🤗 <a href="https://huggingface.co/collections/LGAI-EXAONE/exaone-35-674d0e1bb3dcd2ab6f39dbb4">HuggingFace</a> &nbsp | &nbsp 📝 <a href="https://www.lgresearch.ai/blog/view?seq=507"> Blog</a> &nbsp | &nbsp 📑 <a href="https://www.lgresearch.ai/data/upload/tech_report/en/Technical_report_EXAONE_3.5.pdf"> Technical Report </a>
 <!-- TODO: Add Demo page? -->
 <br>
 
