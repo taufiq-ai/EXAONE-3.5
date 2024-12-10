@@ -25,6 +25,7 @@ Our documentation consists of the following sections:
 
 ## News
 
+- 2024.12.10: We update the EXAONE Modelfile for Ollama. Please use the new one.
 - 2024.12.09: We release the EXAONE 3.5 language model series including 2.4B, 7.8B, and 32B instruction-tuned models. Check out the 📑 [Technical Report](https://arxiv.org/abs/2412.04862)!
 
 <br>
@@ -345,6 +346,9 @@ You can use Ollama to run EXAONE 3.5 models with GGUF format.
 
 3. Write the `Modelfile` for EXAONE 3.5.
 
+> [!Important]
+> The EXAONE Modelfile is updated for better generation quality. We strongly recommend to use the new one.
+
 ```text
 # Model path (choose appropriate GGUF weights on your own)
 FROM ./EXAONE-3.5-7.8B-Instruct-BF16.gguf
@@ -352,14 +356,19 @@ FROM ./EXAONE-3.5-7.8B-Instruct-BF16.gguf
 # Parameter values
 PARAMETER stop "[|endofturn|]"
 PARAMETER temperature 1.0
+PARAMETER repeat_penalty 1.0
+# PARAMETER num_ctx 32768  # if you need a long context
 
 # Chat template
-TEMPLATE """{{- range .Messages }}
+TEMPLATE """{{- range $i, $_ := .Messages }}
+{{- $last := eq (len (slice $.Messages $i)) 1 -}}
 {{ if eq .Role "system" }}[|system|]{{ .Content }}[|endofturn|]
 {{ continue }}
-{{- else if eq .Role "user" }}[|user|]{{ .Content }}
-{{- else if eq .Role "assistant" }}[|assistant|]{{ .Content }}[|endofturn|]
-{{- end }}[|assistant|]{{ end }}"""
+{{ else if eq .Role "user" }}[|user|]{{ .Content }}
+{{ else if eq .Role "assistant" }}[|assistant|]{{ .Content }}[|endofturn|]
+{{ end }}
+{{- if and (ne .Role "assistant") $last }}[|assistant|]{{ end }}
+{{- end -}}"""
 
 # System prompt
 SYSTEM """You are EXAONE model from LG AI Research, a helpful assistant."""
