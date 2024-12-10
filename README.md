@@ -321,7 +321,7 @@ llama-cli -cnv -m ./EXAONE-3.5-7.8B-Instruct-BF16.gguf \
     -p "You are EXAONE model from LG AI Research, a helpful assistant."
 ```
 
-> [!Important]
+> [!Note]
 > In case of using EXAONE 3.5 32B model with BF16 precision, you may need to download all split files and merge them before running the model.
 
 ```bash
@@ -448,6 +448,9 @@ You can also run EXAONE 3.5 models with SGLang.
 python -m sglang.launch_server --model-path LGAI-EXAONE/EXAONE-3.5-7.8B-Instruct \
     --port 30000 --host 0.0.0.0
 ```
+
+> [!Note]
+> In case of using EXAONE 3.5 2.4B model, you need to install sglang>=0.3.6 and use `--attention-backedn triton` option.
 
 3. Send a request with the following curl command after the server starts.
 
