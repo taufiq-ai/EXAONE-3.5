@@ -25,6 +25,8 @@ Our documentation consists of the following sections:
 
 ## News
 
+- 2024.12.11: EXAONE 3.5 is now avaiable on Ollama model library. 
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You can now install `AutoAWQ` library via pip without using the git repository.
 - 2024.12.10: We update the EXAONE Modelfile for Ollama. Please use the new one.
 - 2024.12.09: We release the EXAONE 3.5 language model series including 2.4B, 7.8B, and 32B instruction-tuned models. Check out the 📑 [Technical Report](https://arxiv.org/abs/2412.04862)!
 
@@ -270,10 +272,10 @@ We introduce a series of quantized weights of EXAONE 3.5 models.
 
 We provide AWQ-quantized weights of EXAONE 3.5 models, quantized using `AutoAWQ` library. Please refer to the [AutoAWQ documentation](https://github.com/casper-hansen/AutoAWQ) for more details.
 
-You should install the latest version of `AutoAWQ` library to load the AWQ-quantized version of EXAONE 3.5 models. 
+You need to install the latest version of AutoAWQ library (`autoawq>=0.2.7.post3`) to load the AWQ-quantized version of EXAONE 3.5 models.
 
 ```bash
-pip install git+https://github.com/casper-hansen/AutoAWQ.git
+pip install autoawq
 ```
 
 You can load the model in similar ways to the original models, only changing the model name. It automatically loads with AWQ configuration of the model. Please check the [Quickstart section](#quickstart) above for more details.
@@ -338,7 +340,20 @@ llama-gguf-split --merge \
 
 ### Ollama
 
-You can use Ollama to run EXAONE 3.5 models with GGUF format. 
+EXAONE 3.5 models are uploaded to Ollama model library. You can easily use EXAONE models as follows:
+
+1. Install Ollama. Please refer to the [Ollama repository](https://github.com/ollama/ollama) for more details.
+
+2. Run EXAONE 3.5 model as follows:
+```bash
+ollama run exaone3.5:7.8b
+```
+
+> [!Note]
+> In above example, the model `exaone3.5:7.8b` is quantized in `Q4_K_M`. If you would like to know a list of available models, 
+> please refer to the [EXAONE 3.5 Ollama page](https://ollama.com/library/exaone3.5) for more details.
+
+Or, you can create and run EXAONE 3.5 models with GGUF format for customizing.
 
 1. Install Ollama. Please refer to the [Ollama repository](https://github.com/ollama/ollama) for more details.
 
