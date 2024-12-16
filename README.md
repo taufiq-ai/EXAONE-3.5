@@ -424,7 +424,7 @@ TensorRT-LLM has supported EXAONE language models since EXAONE 3.0. We recommend
 
 You can easily run EXAONE 3.5 models with vLLM. 
 
-1. Install vLLM. Please refer to the [vLLM quickstart guide](https://docs.vllm.ai/en/latest/getting_started/quickstart.html) for more details.
+1. Install vLLM (`vllm>=0.6.0`). Please refer to the [vLLM quickstart guide](https://docs.vllm.ai/en/latest/getting_started/quickstart.html) for more details.
 
 ```bash
 pip install vllm
