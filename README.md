@@ -370,7 +370,6 @@ FROM ./EXAONE-3.5-7.8B-Instruct-BF16.gguf
 
 # Parameter values
 PARAMETER stop "[|endofturn|]"
-PARAMETER temperature 1.0
 PARAMETER repeat_penalty 1.0
 # PARAMETER num_ctx 32768  # if you need a long context
 
@@ -443,8 +442,8 @@ curl -X POST http://localhost:8000/v1/chat/completions \
             {"role": "system", "content": "You are EXAONE model from LG AI Research, a helpful assistant."},
             {"role": "user", "content": "Explain how wonderful you are"}
         ],
-        "max_tokens": 20,
-        "temperature": 0
+        "max_tokens": 128,
+        "temperature": 0.7
     }'
 ```
 
@@ -476,7 +475,9 @@ curl -s http://0.0.0.0:30000/v1/chat/completions \
         "messages": [
             {"role": "system", "content": "You are EXAONE model from LG AI Research, a helpful assistant."},
             {"role": "user", "content": "Explain how wonderful you are"}
-        ]
+        ],
+        "max_tokens": 128,
+        "temperature": 0.7
     }'
 ```
 
