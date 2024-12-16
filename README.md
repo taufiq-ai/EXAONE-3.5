@@ -302,6 +302,9 @@ huggingface-cli download LGAI-EXAONE/EXAONE-3.5-7.8B-Instruct-GGUF \
 
 For end users, we introduce two ways to run EXAONE 3.5 models locally. 
 
+> [!Note]
+> We highly recommend to use repetition penalty not exceeding 1.0 for better generation quality.
+
 ### llama.cpp
 
 You can run EXAONE models with llama.cpp as follows:
@@ -323,20 +326,19 @@ llama-cli -cnv -m ./EXAONE-3.5-7.8B-Instruct-BF16.gguf \
     -p "You are EXAONE model from LG AI Research, a helpful assistant."
 ```
 
-> [!Note]
-> In case of using EXAONE 3.5 32B model with BF16 precision, you may need to download all split files and merge them before running the model.
+- In case of using EXAONE 3.5 32B model with BF16 precision, you may need to download all split files and merge them before running the model.
 
-```bash
-# Download all split files
-huggingface-cli download LGAI-EXAONE/EXAONE-3.5-32B-Instruct-GGUF \
-    --include "EXAONE-3.5-32B-Instruct-BF16*.gguf" \
-    --local-dir .
+    ```bash
+    # Download all split files
+    huggingface-cli download LGAI-EXAONE/EXAONE-3.5-32B-Instruct-GGUF \
+        --include "EXAONE-3.5-32B-Instruct-BF16*.gguf" \
+        --local-dir .
 
-# Merge all split files
-llama-gguf-split --merge \
-    ./EXAONE-3.5-32B-Instruct-BF16-00001-of-00002.gguf \
-    ./EXAONE-3.5-32B-Instruct-BF16.gguf
-```
+    # Merge all split files
+    llama-gguf-split --merge \
+        ./EXAONE-3.5-32B-Instruct-BF16-00001-of-00002.gguf \
+        ./EXAONE-3.5-32B-Instruct-BF16.gguf
+    ```
 
 ### Ollama
 
@@ -406,6 +408,9 @@ ollama run exaone
 ## Deployment
 
 EXAONE 3.5 models have been integrated into various deployment frameworks. 
+
+> [!Note]
+> We highly recommend to use repetition penalty not exceeding 1.0 for better generation quality.
 
 ### TensorRT-LLM
 
